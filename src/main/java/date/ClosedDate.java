@@ -10,6 +10,10 @@ public class ClosedDate {
         this.closureEndTime = closureEndTime;
     }
 
+    public static boolean isEqualTo(ClosedDate actual , ClosedDate expected) {
+        return actual.closureStartTime == expected.closureStartTime &&
+                actual.closureEndTime == expected.closureEndTime;
+    }
 
     public Date getClosureStartTime() {
         return closureStartTime;
