@@ -36,6 +36,25 @@ public class Movie {
         }
     }
 
+    public boolean isReservedSeat(int column , char row) {
+        return seat.get(row-'A').get(column).isReserved();
+    }
+
+    public boolean isReservedMember(Member member) {
+        for (int i = 0 ; i < seatRowSize ; i++) {
+            for (int j = 0 ; j < seatColumnSize ; j++) {
+                if (seat.get(i).get(j).getId() == member.getId()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public int getSeatPrice(char seatRow , int seatColumn) {
+        return seat.get(seatRow-'A').get(seatColumn).getPrice();
+    }
+
     public Long getId() {
         return id;
     }
