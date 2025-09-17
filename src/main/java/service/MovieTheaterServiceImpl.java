@@ -6,7 +6,7 @@ import movieTheater.Movie;
 public class MovieTheaterServiceImpl implements MovieTheaterService {
 
     @Override
-    public int reservedMovie(Member member, Movie movie, char seatRow, int seatColumn) {
+    public int reserveMovie(Member member, Movie movie, char seatRow, int seatColumn) {
         return 0;
     }
 
