@@ -14,7 +14,6 @@ public class MemoryReserveRepository implements ReserveRepository {
         if (reserveRepository.containsKey(reserve.getId())) {
             throw new IllegalStateException("이미 존재하는 id 입니다.");
         }
-
         reserveRepository.put(reserve.getId() , reserve);
     }
 
